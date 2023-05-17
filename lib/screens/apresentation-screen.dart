@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class MyHomePage extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 80),
             margin: EdgeInsets.only(left: 110, right: 110),
             alignment: Alignment.center,
-            child: Column (
+            child: Column(
               children: [
                 Text(
                   'Olá!',
@@ -73,14 +72,14 @@ class MyHomePage extends StatelessWidget {
             alignment: Alignment.center,
             child: Column(
               children: [
-                IconButton(
-                  style: ButtonStyle(),
-                  icon: Icon(Icons.arrow_forward, color: Colors.white,),
-                  color: Color.fromARGB(255, 255, 49, 49),
-                  onPressed: () {   
-                  // Ação ao clicar no botão de seta
-                  },
-                ),
+                MaterialButton(onPressed: () {
+                  
+                },
+                color: Color.fromARGB(255, 255, 49, 49),
+                textColor: Colors.black,
+                child: Icon(Icons.arrow_forward),
+                padding: EdgeInsets.all(21),
+                shape: CircleBorder(),)
               ],
             ),
           ),
