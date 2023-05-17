@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/main-screen.dart';
+import 'screens/episodes1.dart';
 import 'screens/apresentation-screen.dart';
 
 void main() {
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         surface: Color.fromARGB(255, 0, 0, 0), 
         onSurface: Colors.white)
       ),
-      home: Scaffold(body: MyHomePage(),),
+      home: Scaffold(body: MyEpisodes1(),),
     );
   }
 }
