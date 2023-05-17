@@ -13,40 +13,40 @@ class Episode {
        List<Episode> episodes = 
        [ 
           Episode(
-            title: 'Episódio 1',
-            imageUrl: 'https://picsum.photos/id/1/200/300',
+            title: 'Episódio 1: O clube hellfire',
+            imageUrl: 'assets/ep1.png',
           ),
           Episode(
-            title: 'Episódio 2',
-            imageUrl: 'https://picsum.photos/id/2/200/300',
+            title: 'Episódio 2: A maldição de Vecna',
+            imageUrl: 'assets/ep2.png',
           ),
           Episode(
-            title: 'Episódio 3',
-            imageUrl: 'https://picsum.photos/id/1/200/300',
+            title: 'Episódio 3: O monstro e a super-heroína',
+            imageUrl: 'assets/ep3.png',
           ),
           Episode(
-            title: 'Episódio 4',
-            imageUrl: 'https://picsum.photos/id/2/200/300',
+            title: 'Episódio 4: Querido Billy',
+            imageUrl: 'assets/ep4.png',
           ),
           Episode(
-            title: 'Episódio 5',
-            imageUrl: 'https://picsum.photos/id/1/200/300',
+            title: 'Episódio 5: Projeto Nina',
+            imageUrl: 'assets/ep5.png',
           ),
           Episode(
-            title: 'Episódio 6',
-            imageUrl: 'https://picsum.photos/id/2/200/300',
+            title: 'Episódio 6: Mergulho',
+            imageUrl: 'assets/ep6.png',
           ),
           Episode(
-            title: 'Episódio 7',
-            imageUrl: 'https://picsum.photos/id/1/200/300',
+            title: 'Episódio 7: O massacre no laboratório de Hawkins',
+            imageUrl: 'assets/ep7.png',
           ),
           Episode(
-            title: 'Episódio 8',
-            imageUrl: 'https://picsum.photos/id/2/200/300',
+            title: 'Episódio 8: Papai',
+            imageUrl: 'assets/ep8.png',
           ),
           Episode(
-            title: 'Episódio 9',
-            imageUrl: 'https://picsum.photos/id/2/200/300',
+            title: 'Episódio 9: E o plano de Onze',
+            imageUrl: 'assets/ep9.png',
           ),
         ];
         
@@ -63,8 +63,10 @@ class _MySeriesPageState extends State<MySeriesPage> {
       child: Scaffold(
         appBar: AppBar(
 
-          actions: <Widget>[
-          Image.asset('assets/logo.png'),
+          actions: 
+          
+          <Widget>[
+          Image.asset('assets/logo.png', width: 80,),
           IconButton(
             icon: const Icon(Icons.menu),
             tooltip: 'Show Menu',
@@ -78,8 +80,6 @@ class _MySeriesPageState extends State<MySeriesPage> {
               'Comunidade' ];
             },)
         ],
-          title: Text('Stranger Wiki'),
-          
           bottom: TabBar(
             indicatorColor: Color.fromARGB(255, 255, 49, 49), 
             labelColor: Color.fromARGB(255, 255, 49, 49),
@@ -91,6 +91,7 @@ class _MySeriesPageState extends State<MySeriesPage> {
               Tab(text: 'Temporada 4'),
             ],
           ),
+          
         ),
         body: TabBarView(
           children: [
@@ -102,10 +103,8 @@ class _MySeriesPageState extends State<MySeriesPage> {
                 return ListTile(
                   onTap: () {
                   },
-                   trailing: CircleAvatar(
-                    backgroundImage: NetworkImage(widget.episodes[index].imageUrl),
-                  ),
-                  title: Text(widget.episodes[index].title),
+                  
+                  title: Text('Episódio ${index+1}'),
                   
                 );
               },
@@ -141,7 +140,11 @@ class _MySeriesPageState extends State<MySeriesPage> {
                   onTap: () {
                     
                   },
-                  title: Text('Episódio ${index+1}'),
+                  trailing: CircleAvatar(
+                    backgroundImage: NetworkImage(widget.episodes[index].imageUrl),
+                  ),
+                  title: Text(widget.episodes[index].title),
+                  
                 );
               },
             ),

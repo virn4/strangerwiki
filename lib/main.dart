@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/main-screen.dart';
+import 'screens/apresentation-screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Stranger Wiki',
       theme: ThemeData(
-
+        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0),
         colorScheme: ColorScheme(brightness: Brightness.dark,
         primary: Colors.black, 
         onPrimary:Color.fromARGB(255, 255, 255, 255), 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         surface: Color.fromARGB(255, 0, 0, 0), 
         onSurface: Colors.white)
       ),
-      home: Scaffold(body: MySeriesPage(),),
+      home: Scaffold(body: MyHomePage(),),
     );
   }
 }
