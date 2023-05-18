@@ -62,9 +62,8 @@ class _MySeriesPageState extends State<MyEpisodes1> {
       length: 4, 
       child: Scaffold(
         appBar: AppBar(
-
           actions: 
-          
+
           <Widget>[
           Image.asset('assets/logo.png', width: 80,),
           IconButton(

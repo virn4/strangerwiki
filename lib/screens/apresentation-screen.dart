@@ -4,7 +4,8 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: 
+      Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -41,7 +42,7 @@ class MyHomePage extends StatelessWidget {
                       TextSpan(text: 'Este é um aplicativo direcionado aos fãs da série '),
                       TextSpan(
                         text: 'Stranger Things',
-                        style: TextStyle(color: Color.fromARGB(255, 255, 49, 49)),
+                        style: TextStyle(color: Color.fromARGB(255, 222, 49, 49)),
                       ),
                       TextSpan(text: '. Aqui você pode encontrar informações detalhadas e atualizadas sobre o seriado, como o seu enredo, personagens, elenco, curiosidades e entre outros. Vamos lá?'),
                     ],
@@ -75,7 +76,7 @@ class MyHomePage extends StatelessWidget {
                 MaterialButton(onPressed: () {
                   
                 },
-                color: Color.fromARGB(255, 255, 49, 49),
+                color: Color.fromARGB(255, 222, 49, 49),
                 textColor: Colors.black,
                 child: Icon(Icons.arrow_forward),
                 padding: EdgeInsets.all(21),
